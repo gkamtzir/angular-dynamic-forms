@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-dynamic-forms-lib": [
+        "dist/angular-dynamic-forms-lib"
+      ],
+      "angular-dynamic-forms-lib/*": [
+        "dist/angular-dynamic-forms-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
