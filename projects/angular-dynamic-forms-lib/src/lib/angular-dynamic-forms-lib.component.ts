@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'adf-angular-dynamic-forms-lib',
-  template: `
-    <p>
-      angular-dynamic-forms-lib works!
-    </p>
-  `,
+  selector: 'angular-dynamic-forms',
+  templateUrl: 'angular-dynamic-forms-lib.html',
   styles: []
 })
 export class AngularDynamicFormsLibComponent implements OnInit {
