@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'adf-tester';
+  public configuration: any = {
+    firstName: {
+      name: 'First Name',
+      type: 'text'
+    },
+    lastName: {
+      name: 'Last Name',
+      type: 'text'
+    }
+  };
 }

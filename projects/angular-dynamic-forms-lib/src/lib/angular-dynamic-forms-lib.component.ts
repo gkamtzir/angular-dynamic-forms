@@ -1,19 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'adf-angular-dynamic-forms-lib',
-  template: `
-    <p>
-      angular-dynamic-forms-lib works!
-    </p>
-  `,
+  selector: 'angular-dynamic-forms',
+  templateUrl: 'angular-dynamic-forms-lib.html',
   styles: []
 })
 export class AngularDynamicFormsLibComponent implements OnInit {
 
-  constructor() { }
+  @Input('configuration') configuration: any[];
+
+  // Public properties
+  public form: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.initializeForm();
+  }
+
+  /**
+   * Initializes the form.
+   */
+  private initializeForm(): void {
+    let object: any = {};
+
+    for (const prop of Object.keys(this.configuration)) {
+      object[prop] = [''];
+    }
+
+    this.form = this.formBuilder.group(object);
   }
 
 }
