@@ -2,9 +2,9 @@
     <p>Testing Form</p>
 
     <div *ngFor="let field of configuration | keyvalue">
-      <label for="">{{ field.value.name }}</label>
+      <label for="{{field.key}}">{{ field.value.name }}:</label>
       <ng-container *ngIf="field.value.type === elementType.TEXT">
-        <input type="text" />
+        <input id="{{field.key}}" type="text" formControlName="{{ field.key }}" />
       </ng-container>
     </div>
 </form>

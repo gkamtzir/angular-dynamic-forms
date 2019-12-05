@@ -40,7 +40,10 @@ export class AngularDynamicFormsLibComponent implements OnInit {
 
     this.form = this.formBuilder.group(object);
 
-    console.log(this.form);
+    // Watching for changes.
+    this.form.valueChanges.subscribe(val => {
+      console.log(val);
+    });
   }
 
 }
