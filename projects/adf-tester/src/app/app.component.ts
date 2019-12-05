@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-// Interfaces
-import { IConfiguration } from './intefaces/configuration.interface';
+// Intefaces
+import { IConfiguration } from 'angular-dynamic-forms-lib';
 
 // Enumerations
-import { ElementType } from './enumerations/element-type.enum';
+import { ElementType } from 'angular-dynamic-forms-lib';
 
 @Component({
   selector: 'app-root',

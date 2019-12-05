@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
+// Enumerations
+// import { }
+
 @Component({
   selector: 'angular-dynamic-forms',
   templateUrl: 'angular-dynamic-forms-lib.html',

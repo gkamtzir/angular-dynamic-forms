@@ -1,3 +1,8 @@
 <form [formGroup]="form">
-    <p>This is the beginning of the form</p>
+    <p>Testing Form</p>
+
+    <div *ngFor="let field of configuration | keyvalue">
+      {{ field.key }}
+      {{ field.value | json }}
+    </div>
 </form>
