@@ -1,8 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
+// Intefaces
+import { IConfiguration } from './interfaces/configuration.interface';
+
 // Enumerations
-// import { }
+import { ElementType } from './enumerations/element-type.enum';
 
 @Component({
   selector: 'angular-dynamic-forms',
@@ -11,12 +14,15 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class AngularDynamicFormsLibComponent implements OnInit {
 
-  @Input('configuration') configuration: any[];
+  @Input('configuration') configuration: IConfiguration;
 
   // Public properties
   public form: FormGroup;
+  public elementType: any;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+    this.elementType = ElementType;
+   }
 
   ngOnInit() {
     this.initializeForm();
@@ -33,6 +39,8 @@ export class AngularDynamicFormsLibComponent implements OnInit {
     }
 
     this.form = this.formBuilder.group(object);
+
+    console.log(this.form);
   }
 
 }

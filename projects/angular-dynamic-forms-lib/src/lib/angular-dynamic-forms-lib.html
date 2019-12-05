@@ -2,7 +2,9 @@
     <p>Testing Form</p>
 
     <div *ngFor="let field of configuration | keyvalue">
-      {{ field.key }}
-      {{ field.value | json }}
+      <label for="">{{ field.value.name }}</label>
+      <ng-container *ngIf="field.value.type === elementType.TEXT">
+        <input type="text" />
+      </ng-container>
     </div>
 </form>
