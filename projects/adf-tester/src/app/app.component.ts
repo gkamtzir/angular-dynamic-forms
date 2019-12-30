@@ -42,6 +42,24 @@ export class AppComponent {
           value: 'tester'
         }
       ]
+    },
+    Level: {
+      name: 'Level',
+      type: ElementType.RADIO,
+      options: [
+        {
+          name: 'Junior Level',
+          value: 'juniorLevel'
+        },
+        {
+          name: 'Mid Level',
+          value: 'midLevel'
+        },
+        {
+          name: 'Senior Level',
+          value: 'seniorLevel'
+        }
+      ]
     }
   };
 }
