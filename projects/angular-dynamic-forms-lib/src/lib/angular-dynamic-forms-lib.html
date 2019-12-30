@@ -1,27 +1,27 @@
 <form [formGroup]="form">
     <p>Testing Form</p>
 
-    <div *ngFor="let field of configuration | keyvalue">
-      <label for="{{field.key}}">{{ field.value.name }}:</label>
+    <div *ngFor="let field of configuration; trackBy: trackByFn">
+      <label for="{{ field.id }}">{{ field.name }}:</label>
       <br />
-      <ng-container *ngIf="field.value.type === elementType.TEXT">
-        <input id="{{field.key}}" type="text" formControlName="{{ field.key }}" />
+      <ng-container *ngIf="field.type === elementType.TEXT">
+        <input id="{{ field.id }}" type="text" formControlName="{{ field.id }}" />
       </ng-container>
-      <ng-container *ngIf="field.value.type === elementType.CHECKBOX">
-        <input id="{{field.key}}" type="checkbox" formControlName="{{ field.key }}" />
+      <ng-container *ngIf="field.type === elementType.CHECKBOX">
+        <input id="{{ field.id }}" type="checkbox" formControlName="{{ field.id }}" />
       </ng-container>
-      <ng-container *ngIf="field.value.type === elementType.SELECT">
-        <select id="{{ field.key }}" formControlName="{{ field.key }}">
-          <option *ngFor="let option of field.value.options" [value]="option.value">
+      <ng-container *ngIf="field.type === elementType.SELECT">
+        <select id="{{ field.id }}" formControlName="{{ field.id }}">
+          <option *ngFor="let option of field.options" [value]="option.value">
             {{ option.name }}
           </option>
         </select>
       </ng-container>
-      <ng-container *ngIf="field.value.type === elementType.RADIO">
-        <span *ngFor="let option of field.value.options">
+      <ng-container *ngIf="field.type === elementType.RADIO">
+        <span *ngFor="let option of field.options">
           <label for="{{ option.value }}">{{ option.name }}</label>
           <input id="{{ option.value}}" type="radio" name="{{ field.key }}"
-            formControlName="{{ field.key }}" [value]="option.value" />
+            formControlName="{{ field.id }}" [value]="option.value" />
         </span>
       </ng-container>
     </div>

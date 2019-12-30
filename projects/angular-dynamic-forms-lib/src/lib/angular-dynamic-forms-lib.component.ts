@@ -14,7 +14,7 @@ import { ElementType } from './enumerations/element-type.enum';
 })
 export class AngularDynamicFormsLibComponent implements OnInit {
 
-  @Input('configuration') configuration: IConfiguration;
+  @Input('configuration') configuration: IConfiguration[];
 
   // Public properties
   public form: FormGroup;
@@ -34,8 +34,11 @@ export class AngularDynamicFormsLibComponent implements OnInit {
   private initializeForm(): void {
     let object: any = {};
 
-    for (const prop of Object.keys(this.configuration)) {
-      object[prop] = [''];
+    for (const field of this.configuration) {
+      if (!(field.id != null)) {
+        console.error(`Duplicate id has been found. Id '${field.id}' has been used more than once.`);
+      }
+      object[field.id] = [''];
     }
 
     this.form = this.formBuilder.group(object);
@@ -44,6 +47,17 @@ export class AngularDynamicFormsLibComponent implements OnInit {
     this.form.valueChanges.subscribe(val => {
       console.log(val);
     });
+  }
+
+  /**
+   * Tracks each individual item of a list which is
+   * used in an *ngFor directive to prevent unnecessary
+   * DOM manipulations.
+   * @param index The index of the item in the array.
+   * @param item The actual item of the array.
+   */
+  public trackByFn(index, item): number {
+    return index;
   }
 
 }
