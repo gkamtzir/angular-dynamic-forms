@@ -24,6 +24,24 @@ export class AppComponent {
     RememberMe: {
       name: 'Remember Me',
       type: ElementType.CHECKBOX
+    },
+    Profession: {
+      name: 'Profession',
+      type: ElementType.SELECT,
+      options: [
+        {
+          name: 'Software Engineer',
+          value: 'softwareEngineer'
+        },
+        {
+          name: 'DevOps',
+          value: 'devOps'
+        },
+        {
+          name: 'Tester',
+          value: 'tester'
+        }
+      ]
     }
   };
 }
