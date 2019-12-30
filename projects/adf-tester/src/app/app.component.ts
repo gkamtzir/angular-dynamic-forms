@@ -20,6 +20,10 @@ export class AppComponent {
     lastName: {
       name: 'Last Name',
       type: ElementType.TEXT
+    },
+    RememberMe: {
+      name: 'Remember Me',
+      type: ElementType.CHECKBOX
     }
   };
 }
