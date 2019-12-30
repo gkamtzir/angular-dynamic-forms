@@ -12,20 +12,24 @@ import { ElementType } from 'angular-dynamic-forms-lib';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public configuration: IConfiguration = {
-    firstName: {
+  public configuration: IConfiguration[] = [
+    {
+      id: 'firstName',
       name: 'First Name',
       type: ElementType.TEXT
     },
-    lastName: {
+    {
+      id: 'lastName',
       name: 'Last Name',
       type: ElementType.TEXT
     },
-    RememberMe: {
+    {
+      id: 'rememberMe',
       name: 'Remember Me',
       type: ElementType.CHECKBOX
     },
-    Profession: {
+    {
+      id: 'profession',
       name: 'Profession',
       type: ElementType.SELECT,
       options: [
@@ -43,7 +47,8 @@ export class AppComponent {
         }
       ]
     },
-    Level: {
+    {
+      id: 'level',
       name: 'Level',
       type: ElementType.RADIO,
       options: [
@@ -61,5 +66,5 @@ export class AppComponent {
         }
       ]
     }
-  };
+  ];
 }
