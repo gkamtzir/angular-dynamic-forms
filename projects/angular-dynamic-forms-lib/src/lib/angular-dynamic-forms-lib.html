@@ -11,7 +11,7 @@
         <input id="{{field.key}}" type="checkbox" formControlName="{{ field.key }}" />
       </ng-container>
       <ng-container *ngIf="field.value.type === elementType.SELECT">
-        <select id="{{ field.key }}">
+        <select id="{{ field.key }}" formControlName="{{ field.key }}">
           <option *ngFor="let option of field.value.options" [value]="option.value">
             {{ option.name }}
           </option>
