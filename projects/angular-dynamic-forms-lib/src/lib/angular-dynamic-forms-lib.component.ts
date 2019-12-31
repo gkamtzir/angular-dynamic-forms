@@ -10,7 +10,7 @@ import { ElementType } from './enumerations/element-type.enum';
 @Component({
   selector: 'angular-dynamic-forms',
   templateUrl: 'angular-dynamic-forms-lib.html',
-  styles: []
+  styleUrls: ['./angular-dynamic-forms-lib.scss']
 })
 export class AngularDynamicFormsLibComponent implements OnInit {
 

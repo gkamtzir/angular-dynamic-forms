@@ -1,0 +1,17 @@
+.angular-dynamic-forms {
+
+  .field {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    .label {
+      margin-right: 15px;
+    }
+
+    .radio {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
