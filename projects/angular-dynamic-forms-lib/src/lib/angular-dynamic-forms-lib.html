@@ -1,9 +1,6 @@
-<form [formGroup]="form">
-    <p>Testing Form</p>
-
-    <div *ngFor="let field of configuration; trackBy: trackByFn">
-      <label for="{{ field.id }}">{{ field.name }}:</label>
-      <br />
+<form [formGroup]="form" class="angular-dynamic-forms">
+    <div class="field" *ngFor="let field of configuration; trackBy: trackByFn">
+      <label for="{{ field.id }}" class="label">{{ field.name }}:</label>
       <ng-container *ngIf="field.type === elementType.TEXT">
         <input id="{{ field.id }}" type="text" formControlName="{{ field.id }}" />
       </ng-container>
@@ -17,12 +14,12 @@
           </option>
         </select>
       </ng-container>
-      <ng-container *ngIf="field.type === elementType.RADIO">
-        <span *ngFor="let option of field.options">
+      <div *ngIf="field.type === elementType.RADIO">
+        <span *ngFor="let option of field.options" class="radio">
           <label for="{{ option.value }}">{{ option.name }}</label>
           <input id="{{ option.value}}" type="radio" name="{{ field.key }}"
             formControlName="{{ field.id }}" [value]="option.value" />
         </span>
-      </ng-container>
+      </div>
     </div>
 </form>
