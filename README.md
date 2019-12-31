@@ -1,27 +1,19 @@
-# AngularDynamicFormsLib
+# Angular Dynamic Forms Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
+This library provides an easy way to create forms in an Angular application without worrying about the construction of the HTML and Typescript code.
 
-## Development server
+Creating forms in Angular is not that hard. However, when many forms are needed in an application the construction of those forms can be a very repetitive and boring process. That's when developers start copy-pasting the 'form code', both HTML and Typescript, from one part of the application to another. By doing so, the application, gradually, is filled with duplicate code.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The *Angular Dynamic Forms Library* aims to solve this particular problem. With this library the programmer can create entire form structures by, just, providing a configuration JSON object which contains all the needed information in readable format.
 
-## Code scaffolding
+# To-do
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### First Release
+* Determine the supported features (styling, error messages, tooltips, etc)
+* Determine the format of the configuration object
+* Write a detailed documentation about the library
+* Write a detailed documentation about the configuration object
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Second Release
+* Add unit tests
+* Add end-to-end tests
