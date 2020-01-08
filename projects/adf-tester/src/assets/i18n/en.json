@@ -1,0 +1,13 @@
+{
+  "FIRST_NAME": "First Name",
+  "LAST_NAME": "Last Name",
+  "REMEMBER_ME": "Remember me",
+  "PROFESSION": "Profession",
+  "SOFTWARE_ENGINEER": "Software Engineer",
+  "DEV_OPS": "DevOps",
+  "TESTER": "Tester",
+  "LEVEL": "Level",
+  "JUNIOR_LEVEL": "Junior Level",
+  "MID_LEVEL": "Mid Level",
+  "SENIOR_LEVEL": "Senior Level"
+}
