@@ -5,6 +5,7 @@ import { IConfiguration } from 'angular-dynamic-forms-lib';
 
 // Enumerations
 import { ElementType } from 'angular-dynamic-forms-lib';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,56 +13,61 @@ import { ElementType } from 'angular-dynamic-forms-lib';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(private translateService: TranslateService) {
+    this.translateService.setDefaultLang('en');
+  }
+
   public configuration: IConfiguration[] = [
     {
       id: 'firstName',
-      name: 'First Name',
+      name: 'FIRST_NAME',
       type: ElementType.TEXT
     },
     {
       id: 'lastName',
-      name: 'Last Name',
+      name: 'LAST_NAME',
       type: ElementType.TEXT
     },
     {
       id: 'rememberMe',
-      name: 'Remember Me',
+      name: 'REMEMBER_ME',
       type: ElementType.CHECKBOX
     },
     {
       id: 'profession',
-      name: 'Profession',
+      name: 'PROFESSION',
       type: ElementType.SELECT,
       options: [
         {
-          name: 'Software Engineer',
+          name: 'SOFTWARE_ENGINEER',
           value: 'softwareEngineer'
         },
         {
-          name: 'DevOps',
+          name: 'DEV_OPS',
           value: 'devOps'
         },
         {
-          name: 'Tester',
+          name: 'TESTER',
           value: 'tester'
         }
       ]
     },
     {
       id: 'level',
-      name: 'Level',
+      name: 'LEVEL',
       type: ElementType.RADIO,
       options: [
         {
-          name: 'Junior Level',
+          name: 'JUNIOR_LEVEL',
           value: 'juniorLevel'
         },
         {
-          name: 'Mid Level',
+          name: 'MID_LEVEL',
           value: 'midLevel'
         },
         {
-          name: 'Senior Level',
+          name: 'SENIOR_LEVEL',
           value: 'seniorLevel'
         }
       ]
