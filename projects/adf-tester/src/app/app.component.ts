@@ -54,7 +54,20 @@ export class AppComponent {
     {
       id: 'age',
       name: 'AGE',
-      type: ElementType.NUMBER
+      type: ElementType.NUMBER,
+      validations: [
+        {
+          type: ValidationType.REQUIRED
+        },
+        {
+          type: ValidationType.MAX,
+          value: '100'
+        },
+        {
+          type: ValidationType.MIN,
+          value: '18'
+        }
+      ]
     },
     {
       id: 'rememberMe',
