@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // Intefaces
-import { IConfiguration } from 'angular-dynamic-forms-lib';
+import { IConfiguration, ValidationType } from 'angular-dynamic-forms-lib';
 
 // Enumerations
 import { ElementType } from 'angular-dynamic-forms-lib';
@@ -22,12 +22,34 @@ export class AppComponent {
     {
       id: 'firstName',
       name: 'FIRST_NAME',
-      type: ElementType.TEXT
+      type: ElementType.TEXT,
+      validations: [
+        {
+          type: ValidationType.REQUIRED
+        },
+        {
+          type: ValidationType.MAX_LENGTH,
+          value: '40'
+        },
+        {
+          type: ValidationType.MIN_LENGTH,
+          value: '2'
+        }
+      ]
     },
     {
       id: 'lastName',
       name: 'LAST_NAME',
-      type: ElementType.TEXT
+      type: ElementType.TEXT,
+      validations: [
+        {
+          type: ValidationType.REQUIRED
+        },
+        {
+          type: ValidationType.MAX_LENGTH,
+          value: '40'
+        }
+      ]
     },
     {
       id: 'rememberMe',
