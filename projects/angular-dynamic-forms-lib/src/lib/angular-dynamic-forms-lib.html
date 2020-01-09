@@ -4,6 +4,9 @@
       <ng-container *ngIf="field.type === elementType.TEXT">
         <input id="{{ field.id }}" type="text" formControlName="{{ field.id }}" />
       </ng-container>
+      <ng-container *ngIf="field.type === elementType.NUMBER">
+        <input id="{{ field.id }}" type="number" formControlName="{{ field.id }}" />
+      </ng-container>
       <ng-container *ngIf="field.type === elementType.CHECKBOX">
         <input id="{{ field.id }}" type="checkbox" formControlName="{{ field.id }}" />
       </ng-container>

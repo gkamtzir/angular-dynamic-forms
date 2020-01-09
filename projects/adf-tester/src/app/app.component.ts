@@ -52,6 +52,11 @@ export class AppComponent {
       ]
     },
     {
+      id: 'age',
+      name: 'AGE',
+      type: ElementType.NUMBER
+    },
+    {
       id: 'rememberMe',
       name: 'REMEMBER_ME',
       type: ElementType.CHECKBOX
