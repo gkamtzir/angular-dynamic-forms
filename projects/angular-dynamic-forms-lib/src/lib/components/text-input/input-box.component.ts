@@ -5,11 +5,11 @@ import { FormGroup } from '@angular/forms';
 import { IConfiguration } from '../../interfaces/configuration.interface';
 
 @Component({
-  selector: 'text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.css']
+  selector: 'input-box',
+  templateUrl: './input-box.component.html',
+  styleUrls: ['./input-box.component.css']
 })
-export class TextInputComponent implements OnInit {
+export class InputBoxComponent implements OnInit {
 
   // Inputs
   @Input() form: FormGroup;

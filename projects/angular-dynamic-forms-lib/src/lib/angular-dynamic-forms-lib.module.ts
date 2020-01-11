@@ -12,12 +12,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 // Components
 import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
-import { TextInputComponent } from './components/text-input/text-input.component';
+import { InputBoxComponent } from './components/text-input/input-box.component';
 
 @NgModule({
   declarations: [
     AngularDynamicFormsLibComponent,
-    TextInputComponent
+    InputBoxComponent
   ],
   imports: [
     ReactiveFormsModule,
