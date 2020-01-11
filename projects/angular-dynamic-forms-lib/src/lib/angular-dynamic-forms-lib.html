@@ -1,10 +1,7 @@
 <form [formGroup]="form" class="angular-dynamic-forms">
     <div class="field" *ngFor="let field of configuration; trackBy: trackByFn">
-      <ng-container *ngIf="field.type === elementType.TEXT">
+      <ng-container *ngIf="field.type === elementType.TEXT || field.type === elementType.NUMBER">
         <text-input [form]="form" [input]="field"></text-input>
-      </ng-container>
-      <ng-container *ngIf="field.type === elementType.NUMBER">
-        <input id="{{ field.id }}" type="number" formControlName="{{ field.id }}" />
       </ng-container>
       <ng-container *ngIf="field.type === elementType.CHECKBOX">
         <input id="{{ field.id }}" type="checkbox" formControlName="{{ field.id }}" />
