@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
@@ -11,8 +10,15 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+// Components
+import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
+
 @NgModule({
-  declarations: [AngularDynamicFormsLibComponent],
+  declarations: [
+    AngularDynamicFormsLibComponent,
+    TextInputComponent
+  ],
   imports: [
     ReactiveFormsModule,
     CommonModule,
