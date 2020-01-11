@@ -10,11 +10,7 @@
         <input-select [form]="form" [input]="field"></input-select>
       </ng-container>
       <div *ngIf="field.type === elementType.RADIO">
-        <span *ngFor="let option of field.options" class="radio">
-          <label for="{{ option.value }}">{{ option.name | translate }}</label>
-          <input id="{{ option.value}}" type="radio" name="{{ field.key }}"
-            formControlName="{{ field.id }}" [value]="option.value" />
-        </span>
+        <input-radio [form]="form" [input]="field"></input-radio>
       </div>
     </div>
 </form>
