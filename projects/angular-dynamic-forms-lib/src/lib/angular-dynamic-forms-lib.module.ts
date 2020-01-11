@@ -12,7 +12,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 // Components
 import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
-import { InputBoxComponent } from './components/text-input/input-box.component';
+import { InputBoxComponent } from './components/input-box/input-box.component';
 
 @NgModule({
   declarations: [
