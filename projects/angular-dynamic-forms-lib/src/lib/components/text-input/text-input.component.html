@@ -1,1 +1,4 @@
-<p>text-input works!</p>
+<div class="form-group" [formGroup]="form">
+  <label for="{{ input.id }}" class="label">{{ input.name | translate }}:</label>
+  <input id="{{ input.id }}" type="text" formControlName="{{ input.id }}" />
+</div>

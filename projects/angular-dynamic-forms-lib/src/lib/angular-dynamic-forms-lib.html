@@ -1,8 +1,7 @@
 <form [formGroup]="form" class="angular-dynamic-forms">
     <div class="field" *ngFor="let field of configuration; trackBy: trackByFn">
-      <label for="{{ field.id }}" class="label">{{ field.name | translate }}:</label>
       <ng-container *ngIf="field.type === elementType.TEXT">
-        <input id="{{ field.id }}" type="text" formControlName="{{ field.id }}" />
+        <text-input [form]="form" [input]="field"></text-input>
       </ng-container>
       <ng-container *ngIf="field.type === elementType.NUMBER">
         <input id="{{ field.id }}" type="number" formControlName="{{ field.id }}" />
