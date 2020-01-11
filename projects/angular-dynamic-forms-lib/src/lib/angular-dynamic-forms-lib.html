@@ -4,7 +4,7 @@
         <input-box [form]="form" [input]="field"></input-box>
       </ng-container>
       <ng-container *ngIf="field.type === elementType.CHECKBOX">
-        <input id="{{ field.id }}" type="checkbox" formControlName="{{ field.id }}" />
+        <input-checkbox [form]="form" [input]="field"></input-checkbox>
       </ng-container>
       <ng-container *ngIf="field.type === elementType.SELECT">
         <input-select [form]="form" [input]="field"></input-select>

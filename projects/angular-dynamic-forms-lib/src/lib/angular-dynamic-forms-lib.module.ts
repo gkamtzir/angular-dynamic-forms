@@ -14,12 +14,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
 import { InputBoxComponent } from './components/input-box/input-box.component';
 import { InputSelectComponent } from './components/input-select/input-select.component';
+import { InputCheckboxComponent } from './components/input-checkbox/input-checkbox.component';
 
 @NgModule({
   declarations: [
     AngularDynamicFormsLibComponent,
     InputBoxComponent,
-    InputSelectComponent
+    InputSelectComponent,
+    InputCheckboxComponent
   ],
   imports: [
     ReactiveFormsModule,
