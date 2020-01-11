@@ -7,11 +7,7 @@
         <input id="{{ field.id }}" type="checkbox" formControlName="{{ field.id }}" />
       </ng-container>
       <ng-container *ngIf="field.type === elementType.SELECT">
-        <select id="{{ field.id }}" formControlName="{{ field.id }}">
-          <option *ngFor="let option of field.options" [value]="option.value">
-            {{ option.name | translate }}
-          </option>
-        </select>
+        <input-select [form]="form" [input]="field"></input-select>
       </ng-container>
       <div *ngIf="field.type === elementType.RADIO">
         <span *ngFor="let option of field.options" class="radio">

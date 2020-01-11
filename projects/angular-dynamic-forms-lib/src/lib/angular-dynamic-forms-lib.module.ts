@@ -13,11 +13,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 // Components
 import { AngularDynamicFormsLibComponent } from './angular-dynamic-forms-lib.component';
 import { InputBoxComponent } from './components/input-box/input-box.component';
+import { InputSelectComponent } from './components/input-select/input-select.component';
 
 @NgModule({
   declarations: [
     AngularDynamicFormsLibComponent,
-    InputBoxComponent
+    InputBoxComponent,
+    InputSelectComponent
   ],
   imports: [
     ReactiveFormsModule,
