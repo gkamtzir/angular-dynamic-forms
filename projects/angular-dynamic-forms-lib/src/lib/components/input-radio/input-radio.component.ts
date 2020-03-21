@@ -7,7 +7,7 @@ import { IConfiguration } from '../../interfaces/configuration.interface';
 @Component({
   selector: 'input-radio',
   templateUrl: './input-radio.component.html',
-  styleUrls: ['./input-radio.component.css']
+  styleUrls: ['./input-radio.component.scss']
 })
 export class InputRadioComponent implements OnInit {
 

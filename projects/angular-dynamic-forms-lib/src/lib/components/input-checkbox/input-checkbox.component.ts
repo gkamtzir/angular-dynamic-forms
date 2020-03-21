@@ -7,7 +7,7 @@ import { IConfiguration } from '../../interfaces/configuration.interface';
 @Component({
   selector: 'input-checkbox',
   templateUrl: './input-checkbox.component.html',
-  styleUrls: ['./input-checkbox.component.css']
+  styleUrls: ['./input-checkbox.component.scss']
 })
 export class InputCheckboxComponent implements OnInit {
 

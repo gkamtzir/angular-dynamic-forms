@@ -7,7 +7,7 @@ import { IConfiguration } from '../../interfaces/configuration.interface';
 @Component({
   selector: 'input-select',
   templateUrl: './input-select.component.html',
-  styleUrls: ['./input-select.component.css']
+  styleUrls: ['./input-select.component.scss']
 })
 export class InputSelectComponent implements OnInit {
 
