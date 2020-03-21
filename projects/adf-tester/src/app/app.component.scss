@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 60px;
+    border: 1px solid #b8b7c2;
+    border-radius: 5px;
+  }
+}

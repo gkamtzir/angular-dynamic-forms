@@ -63,6 +63,7 @@
               "projects/adf-tester/src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/adf-tester/src/styles.scss"
             ],
             "scripts": []
