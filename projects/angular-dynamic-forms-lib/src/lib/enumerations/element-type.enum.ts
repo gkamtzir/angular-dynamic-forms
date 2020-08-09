@@ -3,5 +3,6 @@ export enum ElementType {
   NUMBER = 'number',
   SELECT = 'select',
   RADIO = 'radio',
-  CHECKBOX = 'checkbox'
+  CHECKBOX = 'checkbox',
+  RANGE = 'range'
 }
