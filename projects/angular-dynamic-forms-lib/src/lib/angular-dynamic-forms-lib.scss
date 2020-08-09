@@ -5,6 +5,12 @@
     justify-content: flex-start;
     margin-bottom: 15px;
 
+    ::ng-deep input {
+      &.form-control {
+        padding: 0px;
+      }
+    }
+
     .label {
       margin-right: 15px;
     }

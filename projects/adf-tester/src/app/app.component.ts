@@ -111,6 +111,11 @@ export class AppComponent {
           value: 'seniorLevel'
         }
       ]
-    }
+    },
+    {
+      id: 'salary',
+      name: 'Salary',
+      type: ElementType.RANGE
+    },
   ];
 }
