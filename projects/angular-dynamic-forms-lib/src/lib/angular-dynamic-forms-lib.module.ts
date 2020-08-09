@@ -16,6 +16,7 @@ import { InputBoxComponent } from './components/input-box/input-box.component';
 import { InputSelectComponent } from './components/input-select/input-select.component';
 import { InputCheckboxComponent } from './components/input-checkbox/input-checkbox.component';
 import { InputRadioComponent } from './components/input-radio/input-radio.component';
+import { InputRangeComponent } from './components/input-range/input-range.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { InputRadioComponent } from './components/input-radio/input-radio.compon
     InputBoxComponent,
     InputSelectComponent,
     InputCheckboxComponent,
-    InputRadioComponent
+    InputRadioComponent,
+    InputRangeComponent
   ],
   imports: [
     ReactiveFormsModule,
