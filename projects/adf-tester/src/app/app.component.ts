@@ -119,6 +119,12 @@ export class AppComponent {
       visibility: VisibilityState.VISIBLE
     },
     {
+      id: 'email',
+      name: 'Email',
+      type: ElementType.EMAIL,
+      visibility: VisibilityState.VISIBLE
+    },
+    {
       id: 'salary',
       name: 'Salary',
       type: ElementType.RANGE,
