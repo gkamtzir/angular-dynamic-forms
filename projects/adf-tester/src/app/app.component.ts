@@ -124,5 +124,11 @@ export class AppComponent {
       type: ElementType.RANGE,
       visibility: VisibilityState.HIDDEN
     },
+    {
+      id: 'cv',
+      name: 'CV',
+      type: ElementType.FILE,
+      visibility: VisibilityState.VISIBLE
+    },
   ];
 }
