@@ -3,8 +3,8 @@
     <legend class="col-form-label col-sm-3 pt-0">{{ input.name | translate }}</legend>
     <div class="col-sm-9">
       <div class="form-check" *ngFor="let option of input.options">
-        <input class="form-check-input" type="radio"
-          id="{{ option.value }}" value="{{ option.value }}" formControlName="{{ input.id }}">
+        <input class="form-check-input" type="radio" id="{{ option.value }}" value="{{ option.value }}"
+          formControlName="{{ input.id }}" [attr.disabled]="input.visibility === VisibilityState.DISABLED ? '' : null">
         <label for="{{ option.value }}" class="form-control-label">{{ option.name | translate }}</label>
       </div>
     </div>
