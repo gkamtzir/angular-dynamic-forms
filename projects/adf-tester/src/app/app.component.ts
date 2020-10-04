@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { IConfiguration, ValidationType } from 'angular-dynamic-forms-lib';
 
 // Enumerations
-import { ElementType } from 'angular-dynamic-forms-lib';
+import { ElementType, VisibilityState } from 'angular-dynamic-forms-lib';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -35,7 +35,8 @@ export class AppComponent {
           type: ValidationType.MIN_LENGTH,
           value: '2'
         }
-      ]
+      ],
+      visibility: VisibilityState.VISIBLE
     },
     {
       id: 'lastName',
@@ -49,7 +50,8 @@ export class AppComponent {
           type: ValidationType.MAX_LENGTH,
           value: '40'
         }
-      ]
+      ],
+      visibility: VisibilityState.VISIBLE
     },
     {
       id: 'age',
@@ -67,12 +69,14 @@ export class AppComponent {
           type: ValidationType.MIN,
           value: '18'
         }
-      ]
+      ],
+      visibility: VisibilityState.VISIBLE
     },
     {
       id: 'rememberMe',
       name: 'REMEMBER_ME',
-      type: ElementType.CHECKBOX
+      type: ElementType.CHECKBOX,
+      visibility: VisibilityState.VISIBLE
     },
     {
       id: 'profession',
@@ -91,7 +95,8 @@ export class AppComponent {
           name: 'TESTER',
           value: 'tester'
         }
-      ]
+      ],
+      visibility: VisibilityState.DISABLED
     },
     {
       id: 'level',
@@ -110,12 +115,14 @@ export class AppComponent {
           name: 'SENIOR_LEVEL',
           value: 'seniorLevel'
         }
-      ]
+      ],
+      visibility: VisibilityState.VISIBLE
     },
     {
       id: 'salary',
       name: 'Salary',
-      type: ElementType.RANGE
+      type: ElementType.RANGE,
+      visibility: VisibilityState.HIDDEN
     },
   ];
 }
