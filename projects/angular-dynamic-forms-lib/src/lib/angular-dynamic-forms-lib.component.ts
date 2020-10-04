@@ -8,6 +8,7 @@ import { IValidation } from './interfaces/validation.interface';
 // Enumerations
 import { ElementType } from './enumerations/element-type.enum';
 import { ValidationType } from './enumerations/validation-type.enum';
+import { VisibilityState } from './enumerations/visibility-state.enum';
 
 @Component({
   selector: 'angular-dynamic-forms',
@@ -21,9 +22,11 @@ export class AngularDynamicFormsLibComponent implements OnInit {
   // Public properties
   public form: FormGroup;
   public elementType: any;
+  public VisibilityState: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.elementType = ElementType;
+    this.VisibilityState = VisibilityState;
    }
 
   ngOnInit() {

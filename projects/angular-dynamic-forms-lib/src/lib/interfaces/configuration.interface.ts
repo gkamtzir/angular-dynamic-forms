@@ -4,6 +4,7 @@ import { IValidation } from './validation.interface';
 
 // Enumerations
 import { ElementType } from '../enumerations/element-type.enum';
+import { VisibilityState } from '../enumerations/visibility-state.enum';
 
 export interface IConfiguration {
   id: string;
@@ -11,4 +12,5 @@ export interface IConfiguration {
   type: ElementType;
   options?: IOption[];
   validations?: IValidation[];
+  visibility: VisibilityState;
 }

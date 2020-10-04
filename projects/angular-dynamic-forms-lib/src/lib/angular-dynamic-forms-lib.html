@@ -1,19 +1,21 @@
 <form [formGroup]="form" class="angular-dynamic-forms">
     <div class="field" *ngFor="let field of configuration; trackBy: trackByFn">
-      <ng-container *ngIf="field.type === elementType.TEXT || field.type === elementType.NUMBER">
-        <input-box [form]="form" [input]="field"></input-box>
-      </ng-container>
-      <ng-container *ngIf="field.type === elementType.CHECKBOX">
-        <input-checkbox [form]="form" [input]="field"></input-checkbox>
-      </ng-container>
-      <ng-container *ngIf="field.type === elementType.SELECT">
-        <input-select [form]="form" [input]="field"></input-select>
-      </ng-container>
-      <div *ngIf="field.type === elementType.RADIO">
-        <input-radio [form]="form" [input]="field"></input-radio>
-      </div>
-      <ng-container *ngIf="field.type === elementType.RANGE">
-        <input-range [form]="form" [input]="field"></input-range>
+      <ng-container *ngIf="field.visibility !== VisibilityState.HIDDEN">
+        <ng-container *ngIf="field.type === elementType.TEXT || field.type === elementType.NUMBER">
+          <input-box [form]="form" [input]="field"></input-box>
+        </ng-container>
+        <ng-container *ngIf="field.type === elementType.CHECKBOX">
+          <input-checkbox [form]="form" [input]="field"></input-checkbox>
+        </ng-container>
+        <ng-container *ngIf="field.type === elementType.SELECT">
+          <input-select [form]="form" [input]="field"></input-select>
+        </ng-container>
+        <div *ngIf="field.type === elementType.RADIO">
+          <input-radio [form]="form" [input]="field"></input-radio>
+        </div>
+        <ng-container *ngIf="field.type === elementType.RANGE">
+          <input-range [form]="form" [input]="field"></input-range>
+        </ng-container>
       </ng-container>
     </div>
     <button type="button" class="btn btn-primary">Submit</button>
