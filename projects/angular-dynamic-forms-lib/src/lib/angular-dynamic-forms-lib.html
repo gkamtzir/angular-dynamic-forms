@@ -16,6 +16,9 @@
         <ng-container *ngIf="field.type === elementType.RANGE">
           <input-range [form]="form" [input]="field"></input-range>
         </ng-container>
+        <ng-container *ngIf="field.type === elementType.EMAIL">
+          <input-email [form]="form" [input]="field"></input-email>
+        </ng-container>
       </ng-container>
     </div>
     <button type="button" class="btn btn-primary">Submit</button>
