@@ -4,6 +4,9 @@ import { FormGroup } from '@angular/forms';
 // Interfaces
 import { IConfiguration } from '../../interfaces/configuration.interface';
 
+// Enumerations
+import { VisibilityState } from '../../enumerations/visibility-state.enum';
+
 @Component({
   selector: 'input-range',
   templateUrl: './input-range.component.html',
@@ -15,7 +18,12 @@ export class InputRangeComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() input: IConfiguration;
 
-  constructor() { }
+  // Public properties
+  public VisibilityState: any;
+
+  constructor() {
+    this.VisibilityState = VisibilityState;
+  }
 
   ngOnInit() {
     console.log(this.input);

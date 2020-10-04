@@ -1,6 +1,7 @@
 <div class="form-group" [formGroup]="form">
   <label for="{{ input.id }}" class="label">{{ input.name | translate }}:</label>
-  <select id="{{ input.id }}" class="form-control" formControlName="{{ input.id }}">
+  <select id="{{ input.id }}" class="form-control" formControlName="{{ input.id }}"
+    [attr.disabled]="input.visibility === VisibilityState.DISABLED ? '' : null">
     <option *ngFor="let option of input.options" [value]="option.value">
       {{ option.name | translate }}
     </option>
