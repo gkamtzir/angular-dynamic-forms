@@ -13,6 +13,9 @@
         <div *ngIf="field.type === elementType.RADIO">
           <input-radio [form]="form" [input]="field"></input-radio>
         </div>
+        <ng-container *ngIf="field.type === elementType.FILE">
+          <input-file [form]="form" [input]="field"></input-file>
+        </ng-container>
         <ng-container *ngIf="field.type === elementType.RANGE">
           <input-range [form]="form" [input]="field"></input-range>
         </ng-container>
