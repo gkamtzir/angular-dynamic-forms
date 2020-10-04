@@ -17,6 +17,9 @@
           <input-range [form]="form" [input]="field"></input-range>
         </ng-container>
       </ng-container>
+      <ng-container *ngIf="field.type === elementType.DATE">
+        <input-date [form]="form" [input]="field"></input-date>
+      </ng-container>
     </div>
     <button type="button" class="btn btn-primary">Submit</button>
 </form>
