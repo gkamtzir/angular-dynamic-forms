@@ -130,5 +130,11 @@ export class AppComponent {
       type: ElementType.RANGE,
       visibility: VisibilityState.HIDDEN
     },
+    {
+      id: 'birthday',
+      name: 'Birthday',
+      type: ElementType.DATE,
+      visibility: VisibilityState.VISIBLE
+    },
   ];
 }
