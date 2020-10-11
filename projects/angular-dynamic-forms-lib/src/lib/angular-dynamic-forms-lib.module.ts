@@ -18,6 +18,8 @@ import { InputCheckboxComponent } from './components/input-checkbox/input-checkb
 import { InputRadioComponent } from './components/input-radio/input-radio.component';
 import { InputRangeComponent } from './components/input-range/input-range.component';
 import { InputFileComponent } from './components/input-file/input-file.component';
+import { InputEmailComponent } from './components/input-email/input-email.component';
+import { InputDateComponent } from './components/input-date/input-date.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { InputFileComponent } from './components/input-file/input-file.component
     InputCheckboxComponent,
     InputRadioComponent,
     InputRangeComponent,
-    InputFileComponent
+    InputFileComponent,
+    InputEmailComponent,
+    InputDateComponent
   ],
   imports: [
     ReactiveFormsModule,
