@@ -131,10 +131,16 @@ export class AppComponent {
       visibility: VisibilityState.HIDDEN
     },
     {
+      id: 'cv',
+      name: 'CV',
+      type: ElementType.FILE,
+      visibility: VisibilityState.VISIBLE
+    },    
+    {
       id: 'birthday',
       name: 'Birthday',
       type: ElementType.DATE,
       visibility: VisibilityState.VISIBLE
-    },
+    }
   ];
 }

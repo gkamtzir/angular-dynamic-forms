@@ -4,7 +4,8 @@ export enum ElementType {
   SELECT = 'select',
   RADIO = 'radio',
   CHECKBOX = 'checkbox',
-  EMAIL = 'email',
+  FILE = 'file',
   RANGE = 'range',
+  EMAIL = 'email',
   DATE = 'date'
 }

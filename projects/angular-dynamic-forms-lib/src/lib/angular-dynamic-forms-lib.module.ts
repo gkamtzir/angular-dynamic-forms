@@ -17,6 +17,7 @@ import { InputSelectComponent } from './components/input-select/input-select.com
 import { InputCheckboxComponent } from './components/input-checkbox/input-checkbox.component';
 import { InputRadioComponent } from './components/input-radio/input-radio.component';
 import { InputRangeComponent } from './components/input-range/input-range.component';
+import { InputFileComponent } from './components/input-file/input-file.component';
 import { InputEmailComponent } from './components/input-email/input-email.component';
 import { InputDateComponent } from './components/input-date/input-date.component';
 
@@ -28,6 +29,7 @@ import { InputDateComponent } from './components/input-date/input-date.component
     InputCheckboxComponent,
     InputRadioComponent,
     InputRangeComponent,
+    InputFileComponent,
     InputEmailComponent,
     InputDateComponent
   ],
